@@ -4,11 +4,10 @@
 #include <stdlib.h>
 
 int main() 
-{   char ch
-    string s,
-    sen scn;
-    scanf("%c %c %c", &ch, &s, &scn);
-    printf("%c\n%c\n%c\n", ch, s, scn);
+{   char ch, w[100],s[100];
+    scanf("%c %s %[^\n]s", &ch, w, s);
+    
+    printf("%c\n%s\n%s\n", ch, w, s);
    
     return 0;
 }
