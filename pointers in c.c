@@ -1,14 +1,24 @@
 #include <stdio.h>
 
-int main() {
-    int a, b, c, d;
-    scanf("%d %d", &a, &b);
-    c=a+b;
-    d=a-b;
-    if (d<1) {
-    d=-d;
+void update(int *a,int *b) 
+{
+    unsigned int alu=*a,begun=*b;
+    *a=alu+begun;
+    *b=(alu-beguun);
+    if (*b<1)
+    {
+        *b=-*b;
     }
-    printf("%d\n%d", c, d);
+}
+
+int main()
+{
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
 
     return 0;
 }
